@@ -9,7 +9,11 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
 #else
-import Cocoa
+    #if os(Linux)
+
+    #else
+    import Cocoa
+    #endif
 #endif
 
 open class HexColorTransform: TransformType {
